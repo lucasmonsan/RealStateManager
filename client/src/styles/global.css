@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,4B8r3B4p7yhRXuBWLqsQ546WR43cqQwrbXMDFnBi6vSJBeif8tPW85a7r7DM961Jvk4hdryZoByEp8GC8HzsqJpRN4FxGM9=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#root {
+  --colorText: #161616;
+  --colorPlaceholder: #868686;
+  --colorBG: #f3f3f3;
+  --color01: #468fd1;
+  --radius: 1em;
 }

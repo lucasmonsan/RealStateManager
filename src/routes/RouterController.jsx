@@ -8,6 +8,7 @@ export const RouterController = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PrivateRoutes/>}>
+          <Route path="/" element={<Navigate to="/dashboard"/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
         </Route>
         <Route path="login" element={<Login/>}/>

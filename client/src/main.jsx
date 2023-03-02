@@ -7,7 +7,7 @@ import './styles/global.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <LoginProvider>
-      <RouterController />
+      <RouterController/>
     </LoginProvider>
   </React.StrictMode>
 )

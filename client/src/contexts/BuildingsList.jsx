@@ -17,7 +17,7 @@ export const BuildingsProvider = ({children}) => {
         id: index + 1,
         name: `${result.name.first} ${result.name.last}`,
         description: `Lindo edifício localizado no bairro ${result.location.city}. ${result.location.state} - ${result.location.country}. Possui ${Math.floor(Math.random() * 5) + 1} quartos, ${Math.floor(Math.random() * 4) + 1} banheiros e uma área de ${Math.floor(Math.random() * 400) + 100}m².`,
-        address: `Rua ${result.location.street.name}, ${Math.floor(Math.random() * 1000)} - ${result.location.city}, ${result.location.state}`,
+        address: `${result.location.street.name}, ${Math.floor(Math.random() * 1000)} - ${result.location.city}, ${result.location.state}`,
         bedrooms: Math.floor(Math.random() * 5) + 1,
         bathrooms: Math.floor(Math.random() * 4) + 1,
         area: Math.floor(Math.random() * 400) + 100,

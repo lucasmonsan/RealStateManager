@@ -5,7 +5,7 @@ export const Title = styled.strong`
   padding: ${props => props.pad};
   font-size: ${props => props.size};
   font-weight: ${props => props.weight};
-  color: var(--colorText);
+  color: var(${props => props.color || "--colorText"});
 `
 export const Text = styled.span`
   width: ${props => props.width};

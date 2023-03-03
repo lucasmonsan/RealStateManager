@@ -9,6 +9,7 @@ export const PageContainer = styled.div`
   gap: 0.5em;
 `
 export const CompContainer = styled.div`
+  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -39,7 +40,25 @@ export const GridContainer = styled.div`
   gap: ${props => props.gap};
   padding: 0.5em 0;
 
+  @media (max-width:2135px) {grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;}
   @media (max-width:1435px) {grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+  @media (max-width:1080px) {grid-template-columns: 1fr 1fr 1fr 1fr;}
+  @media (max-width:769px) {grid-template-columns: 1fr 1fr 1fr;}
+  @media (max-width:540px) {grid-template-columns: 1fr 1fr;}
+`
+export const FloatContainer = styled.div`
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  display: flex;
+  align-items: ${props => props.ai};
+  justify-content: ${props => props.jc};
+  flex-direction: ${props => props.fd};
+  gap: ${props => props.gap};
+  border-radius: ${props => props.radius};
+  background-color: var(${props => props.bg});
+  padding: 0.5em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `
 export const ImgContainer = styled.img`
   overflow: hidden;

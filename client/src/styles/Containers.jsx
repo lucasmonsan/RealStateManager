@@ -8,6 +8,16 @@ export const PageContainer = styled.div`
   flex-direction: column;
   gap: 0.5em;
 `
+export const CompContainer = styled.div`
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  background-color: ${props => props.bg};
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+`
 export const FlexContainer = styled.div`
   display: flex;
   align-items: ${props => props.ai};
@@ -18,11 +28,23 @@ export const FlexContainer = styled.div`
   width: ${props => props.width};
   height: ${props => props.height};
   padding: ${props => props.pad};
-  border-radius: var(--radius);
+  border-radius: ${props => props.radius || "var(--radius)"};
   background-color: var(${props => props.bg});
   color: var(${props => props.color});
 `
+export const GridContainer = styled.div`
+  display: grid;
+  gap: ${props => props.gap};
+  padding: 0.5em 0;
+
+  @media (max-width:1435px) {grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+`
 export const ImgContainer = styled.img`
-  max-width: fit-content;
-  max-height: ${props => props.maxH};
+  overflow: hidden;
+  width: ${props => props.width};
+  height: ${props => props.height};
+  object-fit: cover;
+  max-height: ${props => props.height};
+  min-height: ${props => props.height};
+  border-radius: ${props => props.radius};
 `

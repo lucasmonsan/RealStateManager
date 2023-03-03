@@ -1,11 +1,16 @@
-import { CompContainer, FlexContainer, ImgContainer } from "../styles/Containers"
+import { CompContainer, FlexContainer, FloatContainer, ImgContainer } from "../styles/Containers"
 import { Text, Title } from "../styles/Elements"
 import { RiHotelBedFill, RiRulerFill } from "react-icons/ri"
+import { BsBuildingFillCheck } from "react-icons/bs"
 import { FaBath } from "react-icons/fa"
 
 export const Cards = ({building}) => {
   return (
     <CompContainer bg="white">
+      <FloatContainer gap="0.25em" radius="0.5em" bg="--colorBG">
+        <Title size="0.85rem" color="--color03">25</Title>
+        <BsBuildingFillCheck color="var(--color03)"/>
+      </FloatContainer>
       <ImgContainer width="100%" height="128px" radius="0 0 1em 1em" src={building.image_building}/>
       <FlexContainer fw="wrap" pad="0.25em 0.75em" gap="0.25em">
         <Title size="1.25rem" weight="900" width="100%" pad="0.25em 0 0 0">{building.price}</Title>

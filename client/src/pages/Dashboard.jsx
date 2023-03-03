@@ -10,6 +10,7 @@ export const Dashboard = () => {
   return (
     <PageContainer>
       <Header/>
+      {console.log(buildings)}
       
       <GridContainer gap="1em">
         {buildings.map(building => {return <Cards key={building.id} building={building}/>})}

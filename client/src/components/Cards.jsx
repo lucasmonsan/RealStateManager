@@ -6,9 +6,9 @@ import { FaBath } from "react-icons/fa"
 export const Cards = ({building}) => {
   return (
     <CompContainer bg="white">
-      <ImgContainer width="100%" height="128px" radius="0 0 1em 1em" src={building.image}/>
+      <ImgContainer width="100%" height="128px" radius="0 0 1em 1em" src={building.image_building}/>
       <FlexContainer fw="wrap" pad="0.25em 0.75em" gap="0.25em">
-        <Title size="1.25rem" weight="900" width="100%" pad="0.25em 0 0 0">R${building.price}</Title>
+        <Title size="1.25rem" weight="900" width="100%" pad="0.25em 0 0 0">{building.price}</Title>
         <Text size="0.75rem" weight="500" width="100%" minH="32px">{building.address}</Text>
 
         <FlexContainer width="100%" jc="space-between" pad="0.5em 0">

@@ -1,15 +1,24 @@
 import { CompContainer, FlexContainer, FloatContainer, ImgContainer } from "../styles/Containers"
 import { Text, Title } from "../styles/Elements"
-import { RiHotelBedFill, RiRulerFill } from "react-icons/ri"
-import { BsBuildingFillCheck } from "react-icons/bs"
+import { RiHotelBedFill, RiRulerFill, RiKey2Fill } from "react-icons/ri"
+import { GiCarKey } from "react-icons/gi"
 import { FaBath } from "react-icons/fa"
+import { AnimationsContext } from "../contexts/AnimationsController"
+import { useContext } from "react"
 
 export const Cards = ({building}) => {
+  const { setAnimOneBuilding } = useContext(AnimationsContext);
+
+  const OpenOneBuilding = () => {
+    setAnimOneBuilding("show");
+    localStorage.setItem("building", JSON.stringify(building));
+  }
+
   return (
-    <CompContainer bg="white">
-      <FloatContainer gap="0.25em" radius="0.5em" bg="--colorBG">
-        <Title size="0.85rem" color="--color03">25</Title>
-        <BsBuildingFillCheck color="var(--color03)"/>
+    <CompContainer bg="white" onClick={OpenOneBuilding}>
+      <FloatContainer ai="center" gap="0.25em" radius="0.5em" bg="--colorBG">
+        <Title size="0.85rem" color="--color03">{building.apart_available}</Title>
+        <GiCarKey size={20} color="var(--color03)"/>
       </FloatContainer>
       <ImgContainer width="100%" height="128px" radius="0 0 1em 1em" src={building.image_building}/>
       <FlexContainer fw="wrap" pad="0.25em 0.75em" gap="0.25em">

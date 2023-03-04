@@ -16,10 +16,27 @@ export const CompContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: ${props => props.width};
+  max-width: ${props => props.maxW};
   min-height: ${props => props.height};
+  padding: ${props => props.pad};
   border-radius: var(--radius);
   background-color: ${props => props.bg};
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+`
+export const ModalContainer = styled.div`
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000cc;
+  backdrop-filter: blur(0.25em);
+  width: 100vw;
+  height: 100dvh;
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
 `
 export const FlexContainer = styled.div`
   display: flex;
@@ -29,6 +46,7 @@ export const FlexContainer = styled.div`
   flex-wrap: ${props => props.fw};
   gap: ${props => props.gap};
   width: ${props => props.width};
+  max-width: ${props => props.maxW};
   height: ${props => props.height};
   padding: ${props => props.pad};
   border-radius: ${props => props.radius || "var(--radius)"};

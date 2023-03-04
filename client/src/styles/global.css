@@ -14,5 +14,17 @@
   --color01: #468fd1;
   --color02: #E4A761;
   --color03: #45B4A7;
+  --colorWhite: #FFF;
+  --colorBlack: #000;
   --radius: 1em;
+}
+
+.pointer {cursor: pointer;}
+.click:active {transform: scale(0.95)}
+.fadein {opacity: 1}
+.fadeout {opacity: 0}
+.noArrow::-webkit-outer-spin-button, .noArrow::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
 }
